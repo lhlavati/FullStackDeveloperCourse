@@ -1,5 +1,6 @@
 html, body {
     font-family: 'Comic Neue', cursive;
+    color: #BDA566;
 }
 
 .navbar {
@@ -39,3 +40,26 @@ li a:hover {
     font-size: xx-large;
 }
 
+.container {
+    margin: 0px 250px;
+}
+
+.newest {
+    padding-top: 50px;
+    padding-left: 25px;
+    font-size: 40px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #BDA566;
+}
+
+.doge-song {
+    padding-top: 25px;
+    padding-left: 25px;
+    width: 1000px;
+}
+
+.song-title {
+    padding-left: 50px;
+    font-size: 20px;
+}
