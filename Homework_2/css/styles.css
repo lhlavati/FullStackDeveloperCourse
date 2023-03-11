@@ -1,0 +1,41 @@
+html, body {
+    font-family: 'Comic Neue', cursive;
+}
+
+.navbar {
+    margin: 0px 250px;
+}
+
+.logo {
+    height: 140px;
+    width: 250px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: #BDA566;
+    text-align: center;
+    padding-right: 60px;
+    text-decoration: none;
+}
+
+li a:hover {
+    color: #f8d783;
+}
+
+.navbar-item {
+    padding-top: 50px;
+    font-size: xx-large;
+}
+
