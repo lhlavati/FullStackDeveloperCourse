@@ -4,26 +4,29 @@ html, body {
 }
 
 .navbar {
-    margin: 0px 250px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
 }
 
 .logo {
-    height: 140px;
-    width: 250px;
+    height: 120px;
+    width: 220px;
 }
 
-ul {
+.navbar ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
 }
 
-li {
+.navbar li {
     float: left;
 }
 
-li a {
+.navbar li a {
     display: block;
     color: #BDA566;
     text-align: center;
@@ -31,22 +34,24 @@ li a {
     text-decoration: none;
 }
 
-li a:hover {
+.navbar li a:hover {
     color: #f8d783;
 }
 
 .navbar-item {
     padding-top: 50px;
-    font-size: xx-large;
+    font-size: x-large;
 }
 
-.container {
-    margin: 0px 250px;
+#newest {
+    width: 100%;
+    height: auto;
+    padding-top: 30px;
+    display: block;
+    text-align: center;
 }
 
-.newest {
-    padding-top: 50px;
-    padding-left: 25px;
+.title {
     font-size: 40px;
     font-weight: bold;
     text-decoration: none;
@@ -54,12 +59,53 @@ li a:hover {
 }
 
 .doge-song {
-    padding-top: 25px;
-    padding-left: 25px;
-    width: 1000px;
+    width: 750px;
+    padding-top: 20px;
+    height: auto;
 }
 
-.song-title {
-    padding-left: 50px;
-    font-size: 20px;
+.desc {
+    font-size: 25px;
+    display: block;
+}
+
+#covid-19 {
+    width: 100%;
+    height: auto;
+    padding-top: 30px;
+    text-align: center;
+}
+
+.doge-grid {
+    width: 500px;
+    height: 500px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+#sport {
+    width: 100%;
+    height: auto;
+    padding-top: 30px;
+    text-align: center;
+}
+
+.float-child {
+    padding-top: 10px;
+    padding-bottom: 40px;
+}
+
+footer {
+    text-align: center;
+    background-color: #BDA566;
+    color: white;
+}
+
+.footer-item {
+    padding: 20px;
+    text-decoration: none;
+    color: white;
 }
