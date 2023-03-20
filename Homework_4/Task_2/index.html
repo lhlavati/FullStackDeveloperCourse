@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>DIGITRON</h1>
+      <p>Unesite prvi broj: <input id="prvi" type="number" /></p>
+      <p>Unesite drugi broj: <input id="drugi" type="number" /></p>
+      <button onclick="zbrajanje()" id="zbrajanje">+</button>
+      <button onclick="oduzimanje()" id="oduzimanje">-</button>
+      <button onclick="mnozenje()" id="mnozenje">*</button>
+      <button onclick="dijeljenje()" id="dijeljenje">/</button>
+      <p>Rezultat: <input id="rezultat" type="number" /></p>
+    </div>
+    <script>
+      var prviBroj = document.getElementById("prvi");
+      var drugiBroj = document.getElementById("drugi");
+      var rezultat = document.getElementById("rezultat");
+      function zbrajanje() {
+        rezultat.value = parseInt(prviBroj.value) + parseInt(drugiBroj.value);
+      }
+      function oduzimanje() {
+        rezultat.value = parseInt(prviBroj.value) - parseInt(drugiBroj.value);
+      }
+      function mnozenje() {
+        rezultat.value = parseInt(prviBroj.value) * parseInt(drugiBroj.value);
+      }
+      function dijeljenje() {
+        rezultat.value = parseInt(prviBroj.value) / parseInt(drugiBroj.value);
+      }
+    </script>
+  </body>
+</html>

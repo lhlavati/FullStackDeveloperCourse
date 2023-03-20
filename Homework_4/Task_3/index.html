@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="text-align: center; padding-top: 100px; color: green;" id="citat"></h1>
+    <script>
+        var citati = ["Problemi se povećavaju što se bliže približavamo cilju - Johann Wolfgang von Goethe", 
+                    "Gluhim je ušima uzaludno pjevati - Lucius Livius Andronicus Livije",
+                    "Sramotno je sretan život dati u zamjenu za zlato i srebro - Lucius Annaeus Seneca",
+                    "Tko svoj teret mjeri, može ga i nositi - Marcial Maciel Degollado",
+                    "Vrlina bez mudrosti, ljepota je bez očiju - Morales Baltasar Gracian",
+                    "Nije svrha novina da odgajaju nego da šokiraju - James Gordon Bennett",
+                    ];
+        function randomCitat () {
+            return document.getElementById("citat").innerHTML = citati[Math.floor(Math.random() * 6)];
+        }
+        randomCitat();
+    </script>
+</body>
+</html>
