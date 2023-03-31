@@ -6,3 +6,8 @@
     font-family: 'VT323', monospace;
     text-shadow: 0 0 15px;
 }
+
+.btn {
+    width: 65px;
+    height: 65px;
+}
