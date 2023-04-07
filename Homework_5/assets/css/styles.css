@@ -6,3 +6,12 @@
     font-family: 'VT323', monospace;
     text-shadow: 0 0 15px;
 }
+
+.button:hover {
+    cursor: pointer;
+}
+
+.button::selection{
+    color: none;
+    background: none;
+}
