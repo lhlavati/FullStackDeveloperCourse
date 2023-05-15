@@ -1,0 +1,157 @@
+$lightYellow : #f5e078 ;
+
+.app {
+    display: flex;
+    background-color: #f5e078;
+    justify-content: center;
+    .container {
+
+        width: 1024px;
+        .link {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .auth {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: $lightYellow;
+        
+            h1 {
+                font-size: 20px;
+                color: #58595a;
+                margin-bottom: 20px;
+                text-align: center;
+            }
+
+            form {
+                display: flex;
+                flex-direction: column;
+                padding: 50px;
+                background-color: white;
+                width: 200px;
+                gap: 20px;
+                border-radius: 20px;
+
+                input {
+                    padding: 10px;
+                    border: none;
+                    border-bottom: 1px solid grey;
+                }
+
+                button {
+                    padding: 10px;
+                    border: none;
+                    background-color: $lightYellow;
+                    color: white;
+                    cursor: pointer;
+                }
+
+                p {
+                    font-size: small;
+                    color: red;
+                    text-align: center;
+                }
+
+                span {
+                    text-align: center;
+                    font-size: small;
+                }
+            }
+        }
+
+        .navbar {
+            .container {
+                display: flex;
+                padding: 10px 0px;
+                align-items: center;
+                justify-content: space-between;
+
+                .logo {
+                    img {
+                        width: 120px;
+                    }
+                }
+                .links {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+
+                    h6 {
+                        font-size: 16px;
+                        font-weight: 300;
+                    }
+
+                    span {
+                        cursor: pointer;
+                        color: #9b870c;
+                    }
+
+                    .write {
+                        background-color: $lightYellow;
+                        width: 50px;
+                        height: 50px;
+                        border-radius: 50%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-weight: 300;
+                        border: 1px solid #9b870c;
+
+                        &:hover {
+                            color: $lightYellow;
+                            background-color: #9b870c;
+                            border: 2px solid $lightYellow;
+                        }
+                    }
+                }
+            }
+        }
+
+        footer {
+            margin-top: 100px;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 12px;
+            img {
+                height: 50px;
+            }
+        }
+
+        .home {
+            .notes {
+                margin-top: 30px;
+                display: flex;
+                height: auto;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                .note {
+                    width: calc(20.33% - 10px);
+                    margin-bottom: 20px;
+                    padding: 0 20px 20px 20px;
+                    background-color: #9b870c ;
+                    border-radius: 25px;
+                    .card {
+                        h3 {
+                            color: #f5e078;
+                            font-size: 28px;
+                            text-align: center;
+                          }
+                  
+                          p {
+                            color: #D3D3D3;
+                            text-align: left;
+                            font-size: 15px;
+                            margin-top: 10px;
+                          }
+                    }
+                }
+            }
+        }
+    }
+}
