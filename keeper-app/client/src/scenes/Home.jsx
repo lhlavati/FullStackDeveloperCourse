@@ -1,4 +1,6 @@
 import React from 'react'
+import Edit from '../assets/edit.png'
+import Delete from '../assets/delete.png'
 import { Link } from 'react-router-dom'
 
 const Home = () => {
@@ -27,12 +29,6 @@ const Home = () => {
       note: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt voluptatum amet pariatur animi. Aspernatur natus illum veritatis commodi harum eos.",
       userID: 1
     },
-    {
-      id: 5,
-      title: "Lorem ipsum dolor sit amet, consectetur adipisicing.",
-      note: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt voluptatum amet pariatur animi. Aspernatur natus illum veritatis commodi harum eos.",
-      userID: 1
-    },
   ]
   return (
     <div className="home">
@@ -40,10 +36,14 @@ const Home = () => {
         {notes.map((note) => (
           <div className="note" key={note.id}>
             <div className="card">
-              <Link className="link" to={`/note/${note.id}`}>
-                <h3>{note.title}</h3>
-              </Link>
+              <h3>{note.title}</h3>
               <p>{note.note}</p>
+              <Link to={`/write-note/${note.id}`}>
+                <img src={Edit} alt="edit" />
+              </Link>
+              <Link>
+                <img src={Delete} alt="delete" />
+              </Link>
             </div>
           </div>
         ))}

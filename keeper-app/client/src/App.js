@@ -7,7 +7,6 @@ import {
 import Home from "./scenes/Home";
 import Register from "./scenes/Register";
 import Login from "./scenes/Login";
-import ShowNote from "./scenes/ShowNote";
 import WriteNote from "./scenes/WriteNote";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -40,10 +39,6 @@ const router = createBrowserRouter([
         path: "/write-note/",
         element: <WriteNote/>
       },
-      {
-        path: "/note/:id",
-        element: <ShowNote/>,
-      },
     ]
   },
   {
@@ -57,10 +52,6 @@ const router = createBrowserRouter([
   {
     path: "/write-note",
     element: <WriteNote/>,
-  },
-  {
-    path: "/note",
-    element: <ShowNote/>,
   },
 ]);
 
