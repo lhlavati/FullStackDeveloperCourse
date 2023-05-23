@@ -1,24 +1,36 @@
-import React, { useEffect } from "react";
+import React, { useContext, useEffect } from "react";
 import Edit from "../assets/edit.png";
 import Delete from "../assets/delete.png";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import axios from "axios";
+import { AuthContext } from "../context/authContext.js";
 
 const Home = () => {
   const [notes, setNotes] = useState([]);
+  const { currentUser } = useContext(AuthContext);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get("http://localhost:8800/api/notes");
+        const res = await axios.get("http://localhost:8800/api/notes", {
+          params: { userID: currentUser.id },
+        });
         setNotes(res.data);
       } catch (err) {
         console.log(err);
       }
     };
     fetchData();
-  }, []);
+  }, [currentUser]);
+
+  const handleDelete = async (note) => {
+    try {
+      await axios.delete(`http://localhost:8800/api/notes/${note}`);
+    } catch (err) {
+      console.log(err);
+    }
+  };
 
   return (
     <div className="home">
@@ -33,7 +45,7 @@ const Home = () => {
                   <img src={Edit} alt="edit" />
                 </Link>
                 <Link>
-                  <img src={Delete} alt="delete" />
+                  <img onClick={(e) => handleDelete(note.id, e)} src={Delete} alt="delete" />
                 </Link>
               </div>
             </div>

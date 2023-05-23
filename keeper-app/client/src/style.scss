@@ -130,7 +130,7 @@ $lightYellow : #f5e078 ;
                 display: flex;
                 height: auto;
                 flex-wrap: wrap;
-                justify-content: space-between;
+                gap: 20px;
                 .note {
                     width: calc(20.33% - 10px);
                     margin-bottom: 20px;
