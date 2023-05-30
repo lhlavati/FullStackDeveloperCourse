@@ -24,9 +24,12 @@ const Home = () => {
     fetchData();
   }, [currentUser]);
 
-  const handleDelete = async (note) => {
+  const handleDelete = async (props) => {
     try {
-      await axios.delete(`http://localhost:8800/api/notes/${note}`);
+      await axios.delete(`http://localhost:8800/api/notes/${props}`, {
+        withCredentials: true,
+      });
+      window.location.reload(false);
     } catch (err) {
       console.log(err);
     }
@@ -41,11 +44,11 @@ const Home = () => {
               <div className="card">
                 <h3>{note.title}</h3>
                 <p>{note.note}</p>
-                <Link to={`/write-note/${note.id}`}>
+                <Link to={`/write-note/${note.id}`} state={note}>
                   <img src={Edit} alt="edit" />
                 </Link>
                 <Link>
-                  <img onClick={(e) => handleDelete(note.id, e)} src={Delete} alt="delete" />
+                  <img onClick={() => handleDelete(note.id)} src={Delete} alt="delete" />
                 </Link>
               </div>
             </div>
