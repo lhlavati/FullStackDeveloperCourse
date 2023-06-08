@@ -1,8 +1,10 @@
 $lightYellow : #f5e078 ;
 
+body {
+    background-color: #f5e078;
+
 .app {
     display: flex;
-    background-color: #f5e078;
     justify-content: center;
     .container {
 
@@ -113,13 +115,15 @@ $lightYellow : #f5e078 ;
         }
 
         footer {
-            margin-top: 100px;
             padding: 20px;
             display: flex;
             align-items: center;
             justify-content: space-between;
+            position: fixed;
+            bottom: 0;
             font-size: 12px;
             img {
+                margin-right: 650px;
                 height: 50px;
             }
         }
@@ -209,4 +213,5 @@ $lightYellow : #f5e078 ;
             }
         }
     }
+}
 }

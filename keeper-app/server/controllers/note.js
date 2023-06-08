@@ -1,5 +1,14 @@
 import { db } from "../db.js";
 
+const strip_html_tags = (value) =>{
+    
+  if ((value===null) || (value===''))
+      return false;
+  else
+      value = value.toString();
+  return value.replace(/<[^>]*>/g, '');
+}
+
 export const getNotes = (req, res) => {
   const q = "SELECT * FROM notes WHERE userID = ?";
 
@@ -21,12 +30,12 @@ export const getNote = (req, res) => {
 };
 
 export const addNote = (req, res) => {
-  const q = "INSERT INTO notes(`title`, `note`, `userID`) VALUSE (?)"
+  const q = "INSERT INTO notes(`title`, `note`, `userID`) VALUES (?)"
 
   const values = [
     req.body.title,
-    req.body.note,
-    req.body.userID
+    strip_html_tags(req.body.note),
+    req.body.currentUserID
   ]
 
   db.query(q, [values], (err,data) => {
@@ -45,13 +54,13 @@ export const deleteNote = (req, res) => {
 };
 
 export const updateNote = (req, res) => {
-  const q = "UPDATE notes SET `title`=?, `note`=? WHERE `id` = ?"
+  const q = "UPDATE notes SET `title`=?, `note`=? WHERE `userID` = ? AND `id` = ?"
 
   const noteId = req.params.id
   const values = [
     req.body.title,
-    req.body.note,
-    req.body.userID
+    strip_html_tags(req.body.note),
+    req.body.currentUserID
   ]
 
   db.query(q, [...values, noteId], (err,data) => {
